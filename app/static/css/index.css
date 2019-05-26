@@ -1,6 +1,6 @@
 .container-fluid{
     font-family: 'Tangerine', cursive;
-    background-image: url("https://thumbs.dreamstime.com/t/old-coffee-pot-mill-dark-rustic-background-58104737.jpg");
+    background-image: url("https://images8.alphacoders.com/427/thumb-1920-427655.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -8,7 +8,15 @@
     height: 100%;
     width: 100%;
 }
-h1{
-    font-size: 45px;
+#landing{
+    margin-bottom: 100px;
+    margin-top: 100px;
+    font-size: 35px;
     font-weight: bold;
+}
+h1{
+    font-size: 90px;
+    font-weight: bold;
+
+
 }
