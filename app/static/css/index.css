@@ -1,0 +1,9 @@
+.container-fluid{
+    font-family: 'Tangerine', cursive;
+    background-image: url("https://thumbs.dreamstime.com/t/old-coffee-pot-mill-dark-rustic-background-58104737.jpg")
+
+}
+h1{
+    font-size: 45px;
+    font-weight: bold;
+}
