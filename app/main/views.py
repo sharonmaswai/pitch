@@ -12,4 +12,4 @@ def index():
 def about_app():
     message="This is an app where you get to pitch your idea for one minute then other users can rate yout pitch. You also get to rate other people's idea. How cool is that!!!"
 
-    return render_template('about.html',messgae=message)
+    return render_template('about.html',message=message)
