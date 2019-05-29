@@ -1,64 +1,66 @@
 {% extends 'base.html'%}
 {% import "bootstrap/wtf.html" as wtf %}
+{% block styles%}
 
+
+
+
+{%endblock%}
 {% block content %}
-
 <style>
-        body{
-            font-family: 'Satisfy', cursive; 
-            background-image: url("https://images8.alphacoders.com/427/thumb-1920-427655.jpg"); 
-            background-repeat: no-repeat; 
-            background-size: cover;
-            background-position: center;
-            height: 100%;
-            width: 100%;
-        }
-        .col-md-04{
-            background-color: rgb(68, 65, 65);
-            border-radius: 3%;
-            color: white
-        }
+    .container-fluid{
+        font-family: 'Cinzel', cursive;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-color: black;
+        height: 100%;
+        width: 100%;
+        color: antiquewhite;
+    
+    
+        
+    }
 
 
 </style>
-    
 <div class="container-fluid">
-    <div class="lead text-center">
-       <h1>!Pitch</h1>
-    </div>
     <div class="row">
             <div class="col-md-4 single-source">
                     <div class="row">
                        <u><h1>Business Pitches</h1></u> 
+                       <br>
                         {% for pitch in pitches %}
                             {% if pitch.category == 'Business' %}
                     
-                            <div class="col-md-4 source-name">
+                            <div class="col-md-4">
                                     <h3> {{pitch.title}} </h3>
                                 </div>
-                                <div class="col-md-7 source-details">
-                                    <p> {{pitch.content}}
-                                        
-                            
-                                    </p> 
+                                <div class="col-md-1"></div>
+                                <div class="col-md-7">
+                                    <p> {{pitch.content}}</p> 
                                     <a href="{{url_for('main.post_comment', id=pitch.id)}}">Comment on Pitch</a>           
                                 </div>
                             {% endif %}
                         {% endfor %}   
                     </div>
             </div>
+            <br>
+            <br>
             <div class="col-md-4 single-source">
-                    <u><h1>Event Pitches</h1></u> 
+                    <u><h1>Event Pitches</h1></u>
+                    <br> 
                     <div class="row">
                         {% for pitch in pitches %}
                             {% if pitch.category == 'Event' %}
                     
-                        <div class="col-md-4 source-name">
+                        <div class="col-md-4">
                             <h3> {{pitch.title}} </h3>
                         </div>
-                        <div class="col-md-7 source-details">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-7">
                             <p> {{pitch.content}}
-                                <br>
+                                
                                 <a href="{{url_for('main.post_comment', id=pitch.id)}}">Comment on Pitch</a>
                             </p>            
                         </div>
@@ -66,16 +68,19 @@
                         {% endfor %}   
                     </div>
             </div>
+            <br>
             <div class="col-md-4 single-source">
                     <u><h1>Technology Pitches</h1></u> 
+                    <br>
                     <div class="row">
                         {% for pitch in pitches %}
                             {% if pitch.category == 'Technology' %}
                     
-                            <div class="col-md-4 source-name">
-                                    <h3> {{pitch.title}} </h3>
+                            <div class="col-md-4 ">
+                                    <h4> {{pitch.title}} </h4>
                                 </div>
-                                <div class="col-md-7 source-details">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-7">
                                     <p> {{pitch.content}}
                                         <br>
                                         <a href="{{url_for('main.post_comment', id=pitch.id)}}">Comment on Pitch</a>
@@ -85,6 +90,7 @@
                         {% endfor %}   
                     </div>
             </div>
+            <br>
     </div>
 
 

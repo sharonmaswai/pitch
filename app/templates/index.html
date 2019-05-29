@@ -2,7 +2,7 @@
 
 {%block content%}
 
-<div class="container-fluid" >
+<div class="container-fluid" style="font-family: 'Tangerine', cursive; background-image: url(https://images8.alphacoders.com/427/thumb-1920-427655.jpg);   background-repeat: no-repeat; background-size: cover;background-position: center;height: 100%;width: 100%;">
     
     <div class="row">
 
@@ -10,14 +10,12 @@
 
         </div>
 
-        <div class="col-md-6" id="landing" style="margin-bottom:200px; margin-top: 200px; margin-left: 140px; font-size: 70px;font-weight: bold;">
+        <div class="col-md-6" id="landing" style="margin-bottom:200px; margin-top: 200px; margin-left: 60px; font-size: 70px;font-weight: bold;">
         
-            <strong><h1 style="font-size: 150px; font-weight: bolder;">{{name}}</h1></strong>
-            <a href="{{url_for('main.new_pitch')}}" class="btn btn-secondary" style="margin-left:110px; font-size: 40px">Add Pitch</a>
-            <a href="{{url_for('auth.register')}}"  class="btn btn-secondary" style="margin-left:110px; font-size: 40px" >
-                sign-up
-
-            </a>
+            <strong><h1 style="font-size: 150px; margin-left: 90px; font-weight: bolder;">{{name}}</h1></strong>
+            <a href="{{url_for('main.new_pitch')}}" class="btn btn-secondary" style=" font-size: 40px">Add Pitch</a>
+            <a href="{{url_for('main.post_pitch')}}" class="btn btn-secondary" style=" font-size: 40px">Views Pitches</a>
+            <a href="{{url_for('auth.register')}}"  class="btn btn-secondary" style="font-size: 40px" >sign-up </a>
 
         </div>
 
