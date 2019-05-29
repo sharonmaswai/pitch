@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+
+
+
+{% block content%}
+<body>
+    <div class="container">
+    <div class="row">
+    <div class="col-md-3 pitch_display">
+        {{pitch.content}}
+    </div>
+    <div class="col-md-6">
+        {{ wtf.quick_form(form)}}
+        
+    </div>
+    <div class="col-md-3"></div>
+</div>
+<div class="row">
+    <hr>
+    <h1 class="text-center comment_header">Comments</h1>
+    <hr>
+    {% for comment in comments %}
+    <div class="panel panel-default">
+        <div class="panel-heading">{{comment.comment_title}}</div>
+        <div class="panel-body">{{comment.comment}}</div>
+    </div>
+    {% endfor%}
+</div>
+</div>
+</body>
+{% endblock %}

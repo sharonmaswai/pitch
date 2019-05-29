@@ -1,0 +1,73 @@
+{% extends 'base.html'%}
+{% import "bootstrap/wtf.html" as wtf %}
+
+
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+            <div class="col-md-4 single-source">
+                    <div class="row">
+                       <u><h1>Business Pitches</h1></u> 
+                        {% for pitch in pitches %}
+                            {% if pitch.category == 'Business' %}
+                    
+                            <div class="col-md-4 source-name">
+                                    <h3> {{pitch.title}} </h3>
+                                </div>
+                                <div class="col-md-7 source-details">
+                                    <p> {{pitch.content}}
+                                        
+                            
+                                    </p> 
+                                    <a href="{{url_for('main.post_comment', id=pitch.id)}}">Comment on Pitch</a>           
+                                </div>
+                            {% endif %}
+                        {% endfor %}   
+                    </div>
+            </div>
+            <div class="col-md-4 single-source">
+                    <u><h1>Event Pitches</h1></u> 
+                    <div class="row">
+                        {% for pitch in pitches %}
+                            {% if pitch.category == 'Event' %}
+                    
+                        <div class="col-md-4 source-name">
+                            <h3> {{pitch.title}} </h3>
+                        </div>
+                        <div class="col-md-7 source-details">
+                            <p> {{pitch.content}}
+                                <br>
+                                <a href="{{url_for('main.post_comment', id=pitch.id)}}">Comment on Pitch</a>
+                            </p>            
+                        </div>
+                            {% endif %}
+                        {% endfor %}   
+                    </div>
+            </div>
+            <div class="col-md-4 single-source">
+                    <u><h1>Technology Pitches</h1></u> 
+                    <div class="row">
+                        {% for pitch in pitches %}
+                            {% if pitch.category == 'Technology' %}
+                    
+                            <div class="col-md-4 source-name">
+                                    <h3> {{pitch.title}} </h3>
+                                </div>
+                                <div class="col-md-7 source-details">
+                                    <p> {{pitch.content}}
+                                        <br>
+                                        <a href="{{url_for('main.post_comment', id=pitch.id)}}">Comment on Pitch</a>
+                                    </p>            
+                                </div>
+                            {% endif %}
+                        {% endfor %}   
+                    </div>
+            </div>
+    </div>
+
+
+
+</div>
+
+{% endblock %}

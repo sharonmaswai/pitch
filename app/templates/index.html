@@ -3,38 +3,7 @@
 {%block content%}
 
 <div class="container-fluid" style="font-family: 'Tangerine', cursive; background-image: url(https://images8.alphacoders.com/427/thumb-1920-427655.jpg);   background-repeat: no-repeat; background-size: cover;background-position: center;height: 100%;width: 100%;">
-    <div class="row" style="font-family: 'Cinzel', serif;  font-size: 40px;">
-            <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="navMain">
-                      
-                        <a class="smooth-scroll" href="">|   HOME  |  </a>
-                        <a class="smooth-scroll" href="">|   PITCHES  |  </a>
-                        <a class="smooth-scroll" href="/about">|   ABOUT  |  </a>
-                        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu
-                            <i class="fa fa-bars"></i>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarResponsive">
-                            <ul class="navbar-nav ml-auto">
-                                <li class="nav-item">
-                                    <a class="nav-link smooth-scroll" href="">Login</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link smooth-scroll" href="">Sign-up</a>
-                                </li>
-                               
-                            </ul>
-                        </div>
-                    
-                </nav>
-                <ul class="nav navbar-nav navbar-right">
-                        {% if current_user.is_authenticated %}
-                        <li style="color:white;padding:15px;">{{current_user.username}}</li>
-                        <li><a href="{{url_for('auth.logout')}}">Sign out</a></li>
-                        {% else %}
-                        <li><a href="{{url_for('auth.login')}}">Sign in</a></li>
-                        {%endif%}
-                      </ul>
-    </div>
+    
     <div class="row">
 
         <div class="col-md-3">
@@ -44,11 +13,11 @@
         <div class="col-md-6" id="landing" style="margin-bottom:200px; margin-top: 200px; margin-left: 140px; font-size: 70px;font-weight: bold;">
         
             <strong><h1 style="font-size: 150px; font-weight: bolder;">{{name}}</h1></strong>
-
-            <button class="btn btn-secondary" style="margin-left:110px; font-size: 40px" >
+            <a href="{{url_for('main.new_pitch')}}" class="btn btn-secondary" style="margin-left:110px; font-size: 40px">Add Pitch</a>
+            <a href="{{url_for('auth.register')}}"  class="btn btn-secondary" style="margin-left:110px; font-size: 40px" >
                 sign-up
 
-            </button>
+            </a>
 
         </div>
 

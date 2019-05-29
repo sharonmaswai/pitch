@@ -12,6 +12,11 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- Navbar block  --> 
+    {% block navbar %}
+        {% include 'navbar.html' %}
+    {% endblock %}
+    
     {% block content%}
 
     {%endblock%}
