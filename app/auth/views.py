@@ -4,7 +4,7 @@ from .forms import RegistrationForm, LoginForm, UpdateProfile
 from flask_login import login_user,logout_user,login_required
 from .. import db
 from ..models import User
-from ..email import mail_message
+
 
 
 @auth.route('/login',methods=['GET','POST'])
@@ -28,7 +28,7 @@ def register():
         user = User(email = form.email.data, username = form.username.data,password = form.password.data)
         db.session.add(user)
         db.session.commit()
-        mail_message("Welcome to !Pitch","email/welcome_user",user.email,user=user)
+        # mail_message("Welcome to !Pitch","email/welcome_user",user.email,user=user)
 
 
         

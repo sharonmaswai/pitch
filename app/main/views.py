@@ -49,7 +49,7 @@ def new_pitch():
     
 
 @main.route('/posts/')
-@login_required
+
 
 def post_pitch():
 
