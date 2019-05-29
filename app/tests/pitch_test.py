@@ -11,7 +11,7 @@ id = db.Column(db.Integer, primary_key = True)
     downvote = db.Column(db.Integer)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
 
-class TestUser(unittest):
+class TestPitch(unittest):
     def setUp(self):
         self.new_pitch = Pitch(title='Concerts', downvote=0, upvote=0,content="What if you did not have to...", id=1, category="Events", pitch_id=1,)
 
